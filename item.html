@@ -99,7 +99,7 @@
                         <a class="nav-link active" href="customer.html">Customer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Item</a>
+                        <a class="nav-link active" href="item.html">Item</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active " href="#" >Orders</a>
@@ -118,7 +118,7 @@
 
 <div class="user-img">
     <img src="assets/images/User%20Account.png" title="user">
-    Manage Customer
+    Manage Items
 </div>
 <div class="cus-search">
     <form class="d-flex" role="search">
@@ -133,20 +133,20 @@
     </div>
     <form class="cus-login">
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">ID</label>
+            <label for="exampleInputPassword1" class="form-label">Code</label>
             <input type="password" class="form-control border-success" id="exampleInputPassword">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <label for="exampleInputEmail1" class="form-label">Item Name</label>
             <input type="text" class="form-control border-success" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Address</label>
-            <input type="text" class="form-control border-success" id="exampleInputEmail" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Unit Price</label>
+            <input type="number" class="form-control border-success" id="exampleInputEmail" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Telephone</label>
-            <input type="tel" class="form-control border-success" id="exampleInputPassword1">
+            <label for="exampleInputPassword1" class="form-label">Qty</label>
+            <input type="number" class="form-control border-success" id="exampleInputPassword1">
         </div>
 
         <button type="submit" class="btn btn-success cus-loginbtn">Save</button>
@@ -160,24 +160,24 @@
     <table class="table cus-table ">
         <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Telephone</th>
+            <th scope="col">Code</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Qty</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>C-001</td>
-            <td>Kamal</td>
-            <td>Colombo</td>
-            <td>077 436 23 34</td>
+            <td>I-001</td>
+            <td>Red Rice</td>
+            <td>250.00</td>
+            <td>50</td>
         </tr>
         <tr>
-            <td>C-002</td>
-            <td>Sunil</td>
-            <td>Gampaha</td>
-            <td>075 936 83 04</td>
+            <td>I-002</td>
+            <td>Dhal</td>
+            <td>200.00</td>
+            <td>35</td>
         </tr>
 
         </tbody>
