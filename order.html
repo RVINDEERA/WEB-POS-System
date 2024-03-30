@@ -42,28 +42,10 @@
             font-size: 30px;
         }
 
-        .cus-login{
-            width: 300px;
-            position: absolute;
-            top: 25vh;
-            bottom: 0;
-            left: 10vw;
-            margin: auto;
-        }
-
-        .cus-border{
-            width: 400px;
-            height: 500px;
-            border-radius: 20px;
-            border: 2px solid rgba(76,187,23,0.87);
-            margin-left: 7vw;
-        }
 
         .cus-table{
-            width: 50vw;
-            position: absolute;
-            top: 25vh;
-            left:40vw;
+
+
 
         }
         .cus-search{
@@ -102,7 +84,7 @@
                         <a class="nav-link active" href="item.html">Item</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="#" >Orders</a>
+                        <a class="nav-link active " href="order.html" >Orders</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active " href="#" >Place Order</a>
@@ -132,24 +114,30 @@
     <table class="table cus-table ">
         <thead>
         <tr>
-            <th scope="col">Code</th>
-            <th scope="col">Item Name</th>
-            <th scope="col">Unit Price</th>
-            <th scope="col">Qty</th>
+            <th scope="col">Date</th>
+            <th scope="col">Order ID</th>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Item ID(s)</th>
+            <th scope="col">%</th>
+            <th scope="col">Total</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>I-001</td>
-            <td>Red Rice</td>
-            <td>250.00</td>
-            <td>50</td>
+            <td>3/16/2024</td>
+            <td>O-001</td>
+            <td>C-001</td>
+            <td>I-002,I-003</td>
+            <td>10</td>
+            <td>500</td>
         </tr>
         <tr>
-            <td>I-002</td>
-            <td>Dhal</td>
-            <td>200.00</td>
-            <td>35</td>
+            <td>3/20/2024</td>
+            <td>O-002</td>
+            <td>C-002</td>
+            <td>I-001,I-002,I-003</td>
+            <td>10</td>
+            <td>580</td>
         </tr>
 
         </tbody>
