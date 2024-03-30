@@ -43,21 +43,46 @@
         }
 
         .cus-login{
-            width: 300px;
+            display: flex;
             position: absolute;
             top: 25vh;
             bottom: 0;
-            left: 10vw;
+            left: 4vw;
+            margin: auto;
+        }
+
+        .cus-login1{
+            display: flex;
+            position: absolute;
+            top: 50vh;
+            bottom: 0;
+            left: 4vw;
             margin: auto;
         }
 
         .cus-border{
-            width: 400px;
-            height: 500px;
+            position: absolute;
+            top: 20vh;
+            width: 900px;
+            height: 150px;
             border-radius: 20px;
             border: 2px solid rgba(76,187,23,0.87);
-            margin-left: 7vw;
+            margin-left: 3vw;
         }
+        .cus-border1{
+            position: absolute;
+            top: 45vh;
+            width: 900px;
+            height: 150px;
+            border-radius: 20px;
+            border: 2px solid rgba(76,187,23,0.87);
+            margin-left: 3vw;
+        }
+
+        .cus-space{
+            padding: 5px;
+        }
+
 
         .cus-table{
             width: 50vw;
@@ -66,13 +91,13 @@
             left:40vw;
 
         }
-        .cus-search{
-            padding-top: 5px;
-            width: 300px;
+
+        .cus-h5{
             position: absolute;
-            top: 80px;
-            right: 40px;
+            left: 20px;
+            padding-top:5px ;
         }
+
 
     </style>
 
@@ -102,10 +127,10 @@
                         <a class="nav-link active" href="item.html">Item</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="#" >Orders</a>
+                        <a class="nav-link active " href="order.html" >Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="#" >Place Order</a>
+                        <a class="nav-link active " href="placeOrder.html" >Place Order</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active cus-logout " href="#" >Logout</a>
@@ -117,46 +142,65 @@
 </header>
 
 <div class="user-img">
-    <img src="assets/images/User%20Account.png" title="user">
-    Manage Customer
+    <img src="assets/images/User%20Account.png" title="placeorder">
+    Place Order
 </div>
-<div class="cus-search">
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-success" type="submit">Search</button>
-    </form>
 
-</div>
 
 <section>
     <div class="cus-border">
+        <h5 class="cus-h5">Customer Details</h5>
     </div>
     <form class="cus-login">
-        <div class="mb-3">
+        <div class="mb-3 cus-space" >
             <label for="exampleInputPassword1" class="form-label">ID</label>
             <input type="password" class="form-control border-success" id="exampleInputPassword">
+
         </div>
-        <div class="mb-3">
+        <div class="mb-3 cus-space">
             <label for="exampleInputEmail1" class="form-label">Name</label>
             <input type="text" class="form-control border-success" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
-        <div class="mb-3">
+        <div class="mb-3 cus-space">
             <label for="exampleInputEmail1" class="form-label">Address</label>
             <input type="text" class="form-control border-success" id="exampleInputEmail" aria-describedby="emailHelp">
         </div>
-        <div class="mb-3">
+        <div class="mb-3 cus-space">
             <label for="exampleInputPassword1" class="form-label">Telephone</label>
             <input type="tel" class="form-control border-success" id="exampleInputPassword1">
         </div>
 
-        <button type="submit" class="btn btn-success cus-loginbtn">Save</button>
-        <button type="submit" class="btn btn-primary cus-loginbtn">Update</button>
-        <button type="submit" class="btn btn-danger cus-loginbtn">Delete</button>
-        <button type="submit" class="btn btn-warning cus-loginbtn">Cancel</button>
     </form>
 </section>
 
+
 <section>
+    <div class="cus-border1">
+        <h5 class="cus-h5">Item Details</h5>
+    </div>
+    <form class="cus-login1">
+        <div class="mb-3 cus-space" >
+            <label for="exampleInputPassword1" class="form-label">ID</label>
+            <input type="password" class="form-control border-success" id="exampleInputPassword">
+
+        </div>
+        <div class="mb-3 cus-space">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control border-success" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 cus-space">
+            <label for="exampleInputEmail1" class="form-label">Address</label>
+            <input type="text" class="form-control border-success" id="exampleInputEmail" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 cus-space">
+            <label for="exampleInputPassword1" class="form-label">Telephone</label>
+            <input type="tel" class="form-control border-success" id="exampleInputPassword1">
+        </div>
+
+    </form>
+</section>
+
+<!--<section>
     <table class="table cus-table ">
         <thead>
         <tr>
@@ -182,7 +226,7 @@
 
         </tbody>
     </table>
-</section>
+</section>-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
