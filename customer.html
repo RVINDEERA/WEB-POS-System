@@ -66,6 +66,13 @@
             left:40vw;
 
         }
+        .cus-search{
+            padding-top: 5px;
+            width: 300px;
+            position: absolute;
+            top: 80px;
+            right: 40px;
+        }
 
     </style>
 
@@ -113,11 +120,16 @@
     <img src="assets/images/User%20Account.png" title="user">
     Manage Customer
 </div>
+<div class="cus-search">
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+    </form>
+
+</div>
 
 <section>
-
     <div class="cus-border">
-
     </div>
     <form class="cus-login">
         <div class="mb-3">
@@ -134,7 +146,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Telephone</label>
-            <input type="password" class="form-control border-success" id="exampleInputPassword1">
+            <input type="tel" class="form-control border-success" id="exampleInputPassword1">
         </div>
 
         <button type="submit" class="btn btn-success cus-loginbtn">Save</button>
