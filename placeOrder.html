@@ -73,7 +73,7 @@
             position: absolute;
             top: 45vh;
             width: 900px;
-            height: 150px;
+            height: 200px;
             border-radius: 20px;
             border: 2px solid rgba(76,187,23,0.87);
             margin-left: 3vw;
@@ -96,6 +96,10 @@
             position: absolute;
             left: 20px;
             padding-top:5px ;
+        }
+
+        .btn-add{
+            position: absolute;
         }
 
 
@@ -178,24 +182,27 @@
     <div class="cus-border1">
         <h5 class="cus-h5">Item Details</h5>
     </div>
-    <form class="cus-login1">
+    <form >
+        <section class="cus-login1">
         <div class="mb-3 cus-space" >
-            <label for="exampleInputPassword1" class="form-label">ID</label>
+            <label for="exampleInputPassword1" class="form-label">Code</label>
             <input type="password" class="form-control border-success" id="exampleInputPassword">
 
         </div>
         <div class="mb-3 cus-space">
-            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <label for="exampleInputEmail1" class="form-label">Item Name</label>
             <input type="text" class="form-control border-success" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3 cus-space">
-            <label for="exampleInputEmail1" class="form-label">Address</label>
+            <label for="exampleInputEmail1" class="form-label">Unit Price</label>
             <input type="text" class="form-control border-success" id="exampleInputEmail" aria-describedby="emailHelp">
         </div>
         <div class="mb-3 cus-space">
-            <label for="exampleInputPassword1" class="form-label">Telephone</label>
+            <label for="exampleInputPassword1" class="form-label">Qty</label>
             <input type="tel" class="form-control border-success" id="exampleInputPassword1">
         </div>
+        </section>
+        <button type="button" class="btn btn-primary btn-add">Add</button>
 
     </form>
 </section>
