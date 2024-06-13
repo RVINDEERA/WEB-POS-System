@@ -2,107 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Cart</title>
+    <title>Smart</title>
     <link rel="stylesheet" href="assets/normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <style>
-        .cus-nav{
-            background-color:rgba(76,187,23,0.87);
-            padding-bottom:0;
-            padding-top:0 ;
-            height: 8vh;
-
-
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: url("assets/images/BG-new-3.jpg");
+            background-repeat: repeat;
+            background-position: center;
+            background-size: cover;
         }
-        .cus-navwhite{
-            color: white;
-
-        }
-        .cus-logout{
-            position: absolute;
-            right: 30px;
-        }
-
-        ul>li>a{
-            font-family: "Poppins", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-
-        }
-        .user-img{
-            padding-top: 5px;
-            padding-left: 20px;
-            font-family: "Kanit", sans-serif;
-            font-weight: 600;
-            font-style: normal;
-            color: rgba(76,187,23,0.87);
-            font-size: 30px;
-        }
-
-
-        .cus-table{
-
-
-
-        }
-        .cus-search{
-            padding-top: 5px;
-            width: 300px;
-            position: absolute;
-            top: 80px;
-            right: 40px;
-        }
-
     </style>
 
 </head>
 <body>
-
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary cus-nav ">
-        <div class="container-fluid cus-nav">
-            <!--        <a class="navbar-brand" href="#">Navbar</a>-->
-            <a class="navbar-brand cus-navwhite" href="#">
-                <img src="assets/images/cartwhite.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                My Cart
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-3 mb-5 bg-body-tertiary rounded"  >
+        <div class="container-fluid">s
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/smart_logo.png" alt="Logo" width="80" height="25" class="d-inline-block align-text-top">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active " aria-current="page" href="dashboard.html">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="customer.html">Customer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="item.html">Item</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active " href="order.html" >Orders</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active " href="placeOrder.html" >Place Order</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active cus-logout " href="index.html" >Logout</a>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
+                    <a class="nav-link active" aria-current="page" href="customer.html">Customer</a>
+                    <a class="nav-link active" aria-current="page" href="item.html">Item</a>
+                    <a class="nav-link active" aria-current="page" href="order.html">Order History</a>
+                    <a class="nav-link active" aria-current="page" href="placeOrder.html">Place Order</a>
+                </div>
             </div>
         </div>
     </nav>
+    <!--navbar-->
 </header>
-
-<div class="user-img">
-    <img src="assets/images/User%20Account.png" title="user">
-    Oder History
-</div>
-<div class="cus-search">
+<!--
+<div style="margin-top: 2rem">
     <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-success" type="submit">Search</button>
@@ -142,7 +85,59 @@
 
         </tbody>
     </table>
+</section>-->
+
+
+<section>
+    <!--table-->
+
+    <main>
+        <div class="container mt-4">
+            <h2 class="mb-5 text-dark" style="margin-top: 2rem">Placed Orders History</h2>
+            <div class="card mb-4">
+                <div class="card-body bg-danger-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--                            <h2 class="pt-3 pb-4 text-center font-bold font-up deep-purple-text"> Example Boostrap 4 Search within Responsive table </h2>-->
+                            <div class="input-group md-form form-sm form-2 pl-0">
+                                <!--<input class="form-control my-0 py-1 pl-3 purple-border" type="text" placeholder="Search customer here by ID" aria-label="Search">
+                                <span class="input-group-addon waves-effect purple lighten-2" id="basic-addon1"><a><i class="fa fa-search white-text" aria-hidden="true"> </i> </a> </span>-->
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-dark" type="submit">Search</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped" style="margin-top: 2rem;">
+                        <thead class="table-dark" >
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Customer ID</th>
+                            <th scope="col">Item ID(s)</th>
+                            <th scope="col">%</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td> 5/12/2024 </td>
+                            <td> O-001 </td>
+                            <td> C-001 </td>
+                            <td> I-001 , I-002 </td>
+                            <td> 10 </td>
+                            <td> 650 </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--table-->
 </section>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
