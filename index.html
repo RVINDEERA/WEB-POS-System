@@ -137,7 +137,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="customer-name">Name</label>
-                                                <input type="email" id="customer-name" class="form-control form-control-alternative" placeholder="Customer-Name">
+                                                <input type="text" id="customer-name" class="form-control form-control-alternative" placeholder="Customer-Name">
                                             </div>
                                         </div>
                                     </div>
@@ -160,7 +160,7 @@
                                     <button type="button" class="btn btn-success btn-round" id="customer-save">Save new customer</button>
                                     <button type="button" class="btn btn-primary btn-round" id="customer-update">Update</button>
                                     <button type="button" class="btn btn-danger btn-round" id="customer-delete">Delete</button>
-                                    <button type="button" class="btn btn-warning btn-round" id="customer-cancel">Cancel</button>
+                                    <button type="reset" class="btn btn-warning btn-round" id="customer-cancel">Cancel</button>
                                 </div>
                             </form>
                         </div>
@@ -197,12 +197,8 @@
                             <th> Phone No</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="customer-tbl-tbody">
                         <tr>
-                            <td> C-001 </td>
-                            <td> Nimal </td>
-                            <td> Wattala </td>
-                            <td> 0777878954 </td>
                         </tr>
 
                         </tbody>
@@ -227,7 +223,7 @@
             <h2 class="mb-5 text-dark" style="margin-top: 2rem">Manage Items</h2>
             <div class="row ">
                 <div class="col-xl-12 m-auto order-xl-1">
-                    <div class="card bg-primary-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow ">
+                    <div class="card bg-warning-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow ">
                         <div class="card-body ">
                             <form class="fw-medium">
                                 <h6 class="heading-small text-muted mb-4 fs-4">Item Details</h6>
@@ -265,7 +261,7 @@
                                     <button type="button" class="btn btn-success btn-round" id="item-save">Save new Item</button>
                                     <button type="button" class="btn btn-primary btn-round" id="item-update">Update</button>
                                     <button type="button" class="btn btn-danger btn-round" id="item-delete">Delete</button>
-                                    <button type="button" class="btn btn-warning btn-round" id="item-cancel">Cancel</button>
+                                    <button type="reset" class="btn btn-warning btn-round" id="item-cancel">Cancel</button>
                                 </div>
                             </form>
                         </div>
@@ -283,7 +279,7 @@
     <main>
         <div class="container mt-4">
             <div class="card mb-4">
-                <div class="card-body bg-primary-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow">
+                <div class="card-body bg-warning-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group md-form form-sm form-2 pl-0">
@@ -329,7 +325,7 @@
         <div class="container mt-4">
             <h2 class="mb-5 text-dark" style="margin-top: 2rem">Placed Orders History</h2>
             <div class="card mb-4">
-                <div class="card-body bg-danger-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow">
+                <div class="card-body bg-warning-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group md-form form-sm form-2 pl-0">
@@ -389,7 +385,7 @@
                 <aside class="col-sm-4">
                     <div>
                         <article class="card">
-                            <div class="card-body p-2">
+                            <div class="card-body p-2 card bg-warning-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow">
                                 <div class="card-body ">
                                     <form class="fw-medium">
                                         <h6 class="heading-small text-muted mb-2 fs-4">Customer information</h6>
@@ -463,7 +459,7 @@
 
                 <aside class="col-sm-4 ">
                     <article class="card">
-                        <div class="card-body p-2">
+                        <div class="card-body p-2 card bg-warning-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow" >
                             <div class="card-body ">
                                 <form class="fw-medium">
                                     <h6 class="heading-small text-muted mb-2 fs-4">Item Details</h6>
@@ -532,7 +528,7 @@
 
                 <aside class="col-sm-4 ">
                     <article class="card">
-                        <div class="card-body p-2">
+                        <div class="card-body p-2 card bg-warning-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow">
                             <div class="card-body ">
                                 <form class="fw-medium">
                                     <h6 class="heading-small text-muted mb-2 fs-4">Order Details</h6>
@@ -603,7 +599,7 @@
     <main>
         <div class="container mt-4">
             <div class="card mb-4">
-                <div class="card-body bg-white-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow">
+                <div class="card-body bg-warning-subtle text-dark-emphasis border border-primary-dark rounded-3 shadow">
                     <table class="table table-striped" style="margin-top: 2rem;" id="placeorder-tbl">
                         <thead class="table-dark" >
                         <tr>
