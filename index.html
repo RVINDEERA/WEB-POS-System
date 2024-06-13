@@ -33,11 +33,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
-                    <a class="nav-link active" aria-current="page" href="customer.html">Customer</a>
-                    <a class="nav-link active" aria-current="page" href="item.html">Item</a>
-                    <a class="nav-link active" aria-current="page" href="order.html">Order History</a>
-                    <a class="nav-link active" aria-current="page" href="placeOrder.html">Place Order</a>
+                    <a class="nav-link active" id="nav-dasboard" aria-current="page" href="dashboard.html">Dashboard</a>
+                    <a class="nav-link active" id="nav-customer" aria-current="page" href="customer.html">Customer</a>
+                    <a class="nav-link active" id="nav-item" aria-current="page" href="item.html">Item</a>
+                    <a class="nav-link active" id="nav-order" aria-current="page" href="order.html">Order History</a>
+                    <a class="nav-link active" id="nav-placeorder" aria-current="page" href="placeOrder.html">Place Order</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
 
 <!--dashboard view-->
 
-<section>
+<section id="dashboard-section">
     <!--information cards-->
     <div class="main-content">
         <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -102,8 +102,9 @@
 </section>
 <!--dashboard view-->
 
-<!--customer view-->
 
+<!--customer view-->
+<section id="customer-section">
 <section>
     <!--form-->
     <div class="main-content">
@@ -206,11 +207,13 @@
     </main>
     <!--table-->
 </section>
-
+</section>
 <!--customer view-->
 
-<!--item view-->
 
+
+<!--item view-->
+<section id="item-section">
 <section>
     <!--form-->
     <div class="main-content">
@@ -311,13 +314,13 @@
     </main>
     <!--table-->
 </section>
-
+</section>
 <!--item view-->
+
 
 <!--order view-->
 
-
-<section>
+<section id="order-section">
     <!--table-->
     <main>
         <div class="container mt-4">
@@ -367,8 +370,10 @@
 </section>
 <!--order view-->
 
-<!--placeOrder view-->
 
+
+<!--placeOrder view-->
+<section id="placeOrder-section">
 <div class="container">
     <div class="row">
         <aside class="col-sm-4">
@@ -624,9 +629,14 @@
     </main>
     <!--table-->
 </section>
+</section>
 <!--placeOrder view-->
 
-
+<script src="../assets/lib/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script type="module" src="controller/dashboard.js"></script>
+<script type="module" src="controller/dashboard.js"></script>
+<script type="module" src="controller/dashboard.js"></script>
+<script type="module" src="controller/dashboard.js"></script>
 </body>
 </html>
