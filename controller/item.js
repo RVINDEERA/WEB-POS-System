@@ -62,7 +62,7 @@ function loadItemTable() {
 
     items.map((item,index) => {
         var itemRecord = `<tr>
-                        <td class="i-id">${item.id}</td>
+                        <td class="i-id">${item.code}</td>
                         <td class="i-name">${item.name}</td>
                         <td class="i-price">${item.price}</td>
                         <td class="i-qty">${item.qty}</td>
@@ -75,12 +75,12 @@ function loadItemTable() {
 $('#item-table-body').on('click','tr',function () {
     recordIndexItems = $(this).index();
 
-    var id = $(this).find(".i-id").text();
+    var code = $(this).find(".i-id").text();
     var name = $(this).find(".i-name").text();
     var price = $(this).find(".i-price").text();
     var qty = $(this).find(".i-qty").text();
 
-    $('#item-code').val(id);
+    $('#item-code').val(code);
     $('#item-name').val(name);
     $('#item-unitprice').val(price);
     $('#item-qty').val(qty);
@@ -94,11 +94,27 @@ $('#item-save').on('click',() => {
 
     if (!isValidCode.test(code) || !isValidItemName.test(name) || !isValidPriceAndQty.test(price) || !isValidPriceAndQty.test(qty)) {
         validItem();
-        return false;
+        return ;
     }
 
     let itemModel = new ItemModel(code,name,price,qty);
     items.push(itemModel);
+    emptyPlaceHolder();
+    loadItemTable();
+    clearAll();
+
+});
+
+
+$('#item-delete').on('click',() => {
+
+    var code = $('#item-code').val();
+    var name = $('#item-name').val();
+    var price = $('#item-unitprice').val();
+    var qty = $('#item-qty').val();
+
+
+    items.splice(recordIndexItems,1);
     emptyPlaceHolder();
     loadItemTable();
     clearAll();
