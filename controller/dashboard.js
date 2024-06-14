@@ -1,10 +1,10 @@
 
 
-$('#dashboard-section').css({display: 'block'});
-$('#customer-section').css({display: 'none'});
-$('#item-section').css({display: 'none'});
-$('#order-section').css({display: 'none'});
-$('#placeOrder-section').css({display: 'none'});
+$('#dashboard-section').show();
+$('#customer-section').hide();
+$('#item-section').hide();
+$('#order-section').hide();
+$('#placeOrder-section').hide();
 
 $('#nav-dasboard').on('click', () => {
     $('#dashboard-section').css({display: 'block'});

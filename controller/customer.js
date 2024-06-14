@@ -1,13 +1,13 @@
-import CustomerModel from "../model/CustomerModel";
-import {customers} from "../db/db";
+import CustomerModel from "../model/CustomerModel.js";
+import {customers} from "../db/db.js";
 var recodIndexCustomers;
 
 
-$('#dashboard-section').css({display: 'none'});
+/*$('#dashboard-section').css({display: 'none'});
 $('#customer-section').css({display: 'block'});
 $('#item-section').css({display: 'none'});
 $('#order-section').css({display: 'none'});
-$('#placeOrder-section').css({display: 'none'});
+$('#placeOrder-section').css({display: 'none'});*/
 
 
 
@@ -21,9 +21,9 @@ function loadCustomerTable() {
                  <td class="c-id">${item.id}</td>
                  <td class="c-name">${item.name}</td>
                  <td class="c-address">${item.address}</td>
-                 <td class="c-phoneNumber">${item.phone}</td>
+                 <td class="c-phoneNumber">${item.phoneNumber}</td>
             </tr>`;
-        $("#student-tbl-tbody").append(customerRecord);
+        $("#customer-tbl-tbody").append(customerRecord);
     });
 }
 
@@ -47,6 +47,20 @@ $("#customer-save").on('click',() => {
 
     let customerModel = new CustomerModel(id,name,address,phoneNumber);
     customers.push(customerModel);
+
+    loadCustomerTable();
+    clearAll();
+
+});
+
+$('#customer-delete').on('click',() => {
+
+    var id = $('#customer-id').val();
+    var name = $('#customer-name').val();
+    var address = $('#customer-address').val();
+    var phoneNumber = $('#customer-phone').val();
+
+    customers.splice(recodIndexCustomers,1);
 
     loadCustomerTable();
     clearAll();
