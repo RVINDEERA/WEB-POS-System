@@ -100,3 +100,22 @@ $('#customer-update').on('click',() => {
     clearAll();
 
 });
+
+function searchCustomers(query) {
+    const searchTerm = query.toLowerCase();
+
+    for (let i = 0; i < customers.length; i++) {
+        if (searchTerm === customers[i].id.toLowerCase() || searchTerm === customers[i].phoneNumber.toLowerCase()) {
+            $('#customer-id').val(customers[i].id);
+            $('#customer-name').val(customers[i].name);
+            $('#customer-address').val(customers[i].address);
+            $('#customer-phone').val(customers[i].phoneNumber);
+            break;
+        }
+    }
+}
+
+$('#btnSearchCustomer').on('click', function() {
+    const searchQuery = $('#search-customer').val();
+    searchCustomers(searchQuery);
+});
