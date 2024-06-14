@@ -64,6 +64,8 @@ $("#customer-save").on('click',() => {
 
     loadCustomerTable();
     clearAll();
+    totalCustomers();
+
 
 });
 
@@ -78,6 +80,8 @@ $('#customer-delete').on('click',() => {
 
     loadCustomerTable();
     clearAll();
+    totalCustomers();
+
 
 });
 
@@ -98,6 +102,8 @@ $('#customer-update').on('click',() => {
 
     loadCustomerTable();
     clearAll();
+    totalCustomers();
+
 
 });
 
@@ -119,3 +125,8 @@ $('#btnSearchCustomer').on('click', function() {
     const searchQuery = $('#search-customer').val();
     searchCustomers(searchQuery);
 });
+
+function totalCustomers() {
+    var total = customers.length;
+    $('#customerCount').text(total);
+}
