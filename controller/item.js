@@ -85,3 +85,22 @@ $('#item-table-body').on('click','tr',function () {
     $('#item-unitprice').val(price);
     $('#item-qty').val(qty);
 });
+
+$('#item-save').on('click',() => {
+    var code = $('#item-code').val();
+    var name = $('#item-name').val();
+    var price = $('#item-unitprice').val();
+    var qty = $('#item-qty').val();
+
+    if (!isValidCode.test(code) || !isValidItemName.test(name) || !isValidPriceAndQty.test(price) || !isValidPriceAndQty.test(qty)) {
+        validItem();
+        return false;
+    }
+
+    let itemModel = new ItemModel(code,name,price,qty);
+    items.push(itemModel);
+    emptyPlaceHolder();
+    loadItemTable();
+    clearAll();
+
+});
