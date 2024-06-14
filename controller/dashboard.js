@@ -1,4 +1,5 @@
 import {customers} from "../db/db.js";
+import {items} from "../db/db.js";
 
 
 $('#dashboard-section').show();
@@ -50,4 +51,9 @@ $('#nav-placeorder').on('click', () => {
 function totalCustomersHome() {
     var total = customers.length;
     $('#customerCount').text(total);
+}
+
+function totalItems() {
+    var total = items.length;
+    $('#itemCount').text(total);
 }
