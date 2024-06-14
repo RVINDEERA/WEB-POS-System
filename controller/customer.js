@@ -10,7 +10,21 @@ $('#order-section').css({display: 'none'});
 $('#placeOrder-section').css({display: 'none'});*/
 
 
+var ValidCustomerID = $('#customer-id>#customer-id');
+var ValidCustomerName = $('#customer-name>#customer-name');
+var ValidCustomerAddress = $('#customer-address>#customer-address');
+var ValidCustomerPhoneNumber = $('#customer-phone>#customer-phone');
+var isValidCustomerName = new RegExp("\\b[A-Z][a-z]*( [A-Z][a-z]*)*\\b");
+var isValidCustomerAddress = new RegExp("^[A-Za-z0-9'\\/\\.,\\s]{5,}$");
+var isValidPhoneNumber = new RegExp("^(?:0|94|\\+94|0094)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|91)(0|2|3|4|5|7|9)|7(0|1|2|4|5|6|7|8)\\d)\\d{6}$");
+var isValidID = new RegExp("C\\d\\d\\d");
 
+function emptyPlaceHolder() {
+    $(ValidCustomerID).attr("placeholder", "");
+    $(ValidCustomerName).attr("placeholder", "");
+    $(ValidCustomerAddress).attr("placeholder", "");
+    $(ValidCustomerPhoneNumber).attr("placeholder", "");
+}
 function loadCustomerTable() {
 
     $("#customer-tbl-tbody").empty();
@@ -41,6 +55,22 @@ $('#customer-tbl-tbody').on('click','tr',function () {
     $('#customer-phone').val(phoneNumber);
 });
 
+function validCustomer() {
+    var customerID = $('#customer-id').val();
+    var customerName = $('#customer-name').val();
+    var customerAddress = $('#customer-address').val();
+    var phoneNumber = $('#customer-phone').val();
+
+    if (!isValidID.test(customerID) || !isValidCustomerName.test(customerName) || !isValidCustomerAddress.test(customerAddress) || !isValidPhoneNumber.test(phoneNumber)) {
+
+        $(ValidCustomerID).attr("placeholder", "ID Empty");
+        $(ValidCustomerName).attr("placeholder", "Wrong Input Try Again");
+        $(ValidCustomerAddress).attr("placeholder", "Wrong Input Try Again");
+        $(ValidCustomerPhoneNumber).attr("placeholder", "Wrong Input Try Again");
+    }  else {
+        emptyPlaceHolder();
+    }
+}
 function clearAll() {
     $('#customer-id').val("");
     $('#customer-name').val("");
@@ -57,7 +87,11 @@ $("#customer-save").on('click',() => {
     var name = $('#customer-name').val();
     var address = $('#customer-address').val();
     var phoneNumber = $('#customer-phone').val();
-    console.log("press");
+
+    if (!isValidID.test(id) || !isValidCustomerName.test(name) || !isValidCustomerAddress.test(address) || !isValidPhoneNumber.test(phoneNumber)) {
+        validCustomer();
+        return;
+    }
 
     let customerModel = new CustomerModel(id,name,address,phoneNumber);
     customers.push(customerModel);
@@ -65,6 +99,7 @@ $("#customer-save").on('click',() => {
     loadCustomerTable();
     clearAll();
     totalCustomers();
+    emptyPlaceHolder();
 
 
 });
@@ -76,15 +111,18 @@ $('#customer-delete').on('click',() => {
     var address = $('#customer-address').val();
     var phoneNumber = $('#customer-phone').val();
 
+    if (!isValidID.test(id) || !isValidCustomerName.test(name) || !isValidCustomerAddress.test(address) || !isValidPhoneNumber.test(phoneNumber)) {
+        validCustomer();
+        return;
+    }
+
     customers.splice(recodIndexCustomers,1);
 
     loadCustomerTable();
     clearAll();
     totalCustomers();
-
-
+    emptyPlaceHolder();
 });
-
 
 $('#customer-update').on('click',() => {
 
@@ -93,6 +131,10 @@ $('#customer-update').on('click',() => {
     var address = $('#customer-address').val();
     var phoneNumber = $('#customer-phone').val();
 
+    if (!isValidID.test(id) || !isValidCustomerName.test(name) || !isValidCustomerAddress.test(address) || !isValidPhoneNumber.test(phoneNumber)) {
+        validCustomer();
+        return;
+    }
 
     var cOb = customers[recodIndexCustomers];
     cOb.id = id;
@@ -103,6 +145,7 @@ $('#customer-update').on('click',() => {
     loadCustomerTable();
     clearAll();
     totalCustomers();
+    emptyPlaceHolder();
 
 
 });

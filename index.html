@@ -125,8 +125,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group md-form form-sm form-2 pl-0">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-dark" type="submit">Search</button>
+                                <input id="search-customer" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button id="btnSearchCustomer" class="btn btn-dark" type="submit">Search</button>
                             </div>
                         </div>
                     </div>
@@ -170,7 +170,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <h5 class="card-title text-uppercase text-muted mb-0">Customers</h5>
-                                            <span class="h2 font-weight-bold mb-0">0</span>
+                                            <span id="customerCount" class="h2 font-weight-bold mb-0">0</span>
                                         </div>
                                     </div>
                                 </div>
@@ -244,13 +244,13 @@
                                         <div class="col-lg-6">
                                             <div class="form-group focused">
                                                 <label class="form-control-label" for="item-unitprice">Unit Price</label>
-                                                <input type="text" id="item-unitprice" class="form-control form-control-alternative" placeholder="Each item-Price" >
+                                                <input type="number" id="item-unitprice" class="form-control form-control-alternative" placeholder="Each item-Price" >
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group focused">
                                                 <label class="form-control-label" for="item-qty">Quantity</label>
-                                                <input type="text" id="item-qty" class="form-control form-control-alternative" placeholder="Item-Quantity" >
+                                                <input type="number" id="item-qty" class="form-control form-control-alternative" placeholder="Item-Quantity" >
                                             </div>
                                         </div>
                                     </div>
