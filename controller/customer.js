@@ -27,6 +27,20 @@ function loadCustomerTable() {
     });
 }
 
+$('#customer-tbl-tbody').on('click','tr',function () {
+    recodIndexCustomers = $(this).index();
+
+    var id = $(this).find(".c-id").text();
+    var name = $(this).find(".c-name").text();
+    var address = $(this).find(".c-address").text();
+    var phoneNumber = $(this).find(".c-phoneNumber").text();
+
+    $('#customer-id').val(id);
+    $('#customer-name').val(name);
+    $('#customer-address').val(address);
+    $('#customer-phone').val(phoneNumber);
+});
+
 function clearAll() {
     $('#customer-id').val("");
     $('#customer-name').val("");
@@ -61,6 +75,26 @@ $('#customer-delete').on('click',() => {
     var phoneNumber = $('#customer-phone').val();
 
     customers.splice(recodIndexCustomers,1);
+
+    loadCustomerTable();
+    clearAll();
+
+});
+
+
+$('#customer-update').on('click',() => {
+
+    var id = $('#customer-id').val();
+    var name = $('#customer-name').val();
+    var address = $('#customer-address').val();
+    var phoneNumber = $('#customer-phone').val();
+
+
+    var cOb = customers[recodIndexCustomers];
+    cOb.id = id;
+    cOb.name = name;
+    cOb.address = address;
+    cOb.phoneNumber = phoneNumber;
 
     loadCustomerTable();
     clearAll();
