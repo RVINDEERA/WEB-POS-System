@@ -102,7 +102,7 @@ $('#item-save').on('click',() => {
     emptyPlaceHolder();
     loadItemTable();
     clearAll();
-
+    totalItems()
 });
 
 
@@ -118,5 +118,55 @@ $('#item-delete').on('click',() => {
     emptyPlaceHolder();
     loadItemTable();
     clearAll();
+    totalItems()
+});
+
+
+$('#item-update').on('click',() => {
+    var code = $('#item-code').val();
+    var name = $('#item-name').val();
+    var price = $('#item-unitprice').val();
+    var qty = $('#item-qty').val();
+
+    if (!isValidCode.test(code) || !isValidItemName.test(name) || !isValidPriceAndQty.test(price) || !isValidPriceAndQty.test(qty)) {
+        validItem();
+        return ;
+    }
+
+    var iOb = items[recordIndexItems];
+    iOb.id = code;
+    iOb.name = name;
+    iOb.price = price;
+    iOb.qty = qty;
+
+    emptyPlaceHolder();
+    loadItemTable();
+    clearAll();
+    totalItems()
 
 });
+
+function searchItems(query) {
+    const searchTerm = query.toLowerCase();
+
+    for (let i = 0; i < items.length; i++) {
+        if (searchTerm === items[i].code.toLowerCase()) {
+            $('#item-code').val(items[i].code);
+            $('#item-name').val(items[i].name);
+            $('#item-unitprice').val(items[i].price);
+            $('#item-qty').val(items[i].qty);
+            break;
+
+        }
+    }
+}
+
+$('#searchItem').on('click', function() {
+    const searchQuery = $('#itemSearch').val();
+    searchItems(searchQuery);
+});
+
+function totalItems() {
+    var total = items.length;
+    $('#itemCount').text(total);
+}
